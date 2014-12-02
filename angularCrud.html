@@ -2,11 +2,11 @@
 	<h3>{{options.crudName}}</h3>
 
 	<div class="col-xs-12">
-		<div ng-repeat="fieldLine in options.fields"  class="col-xs-12">
+		<div ng-repeat="fieldLine in options.fields"  class="col-xs-12 form-group">
 			
-			<div ng-repeat="field in fieldLine">
-				<label class="{{options.getLabeldClass(field)}}">{{field.label}}{{options.getNotNull(field)}}:</label>
-				<input class="{{options.getFieldClass(field)}}" />
+			<div ng-repeat="field in fieldLine" class="form-group">
+				<label class="{{options.getLabelClass(field)}} control-label" style="text-align: right;margin-top: 7px;">{{field.label}} {{options.getNotNull(field)}}:</label>
+				<span class="{{options.getFieldClass(field)}}"><input class="form-control"/></span>
 			</div>
 
 		</div>

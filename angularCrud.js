@@ -48,18 +48,18 @@
 			}
 		},
 		//utils
-		getFieldClass: function(fied){
+		getFieldClass: function(field){
 			if(field.size){
-				return  "col-xs-" + field.size
+				return  "col-xs-" + field.size;
 			}else{
-				return  "col-xs-8"
+				return  "col-xs-8";
 			}
 		},
-		getLabeldClass: function(fied){
+		getLabelClass: function(field){
 			if(field.labelSize){
-				return  "col-xs-" + field.size
+				return  "col-xs-" + field.labelSize;
 			}else{
-				return  "col-xs-4"
+				return  "col-xs-4";
 			}
 		},
 		getNotNull: function(field){
@@ -77,9 +77,7 @@
 			compile : function(element, attrs){
 				return {
 					pre: function preLink(scope, iElement, iAttrs, controller) {
-						console.log(scope);
 						scope.options = angular.extend(defaultOptions, scope.options);
-						console.log(scope.options);
 					}
 				}
 			}
